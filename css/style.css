@@ -14,7 +14,8 @@ body {
   background: transparent;
   border: none;
 }
-
+.container button:focus {
+  outline: none}
 .container {
   position: relative;
 }
@@ -24,7 +25,7 @@ body {
   bottom: 0;
   right: 10px;
   font-size: 14px;
-  color: #AFAFAF;
+  color: #6FAAFF;
   border-bottom: 2px solid #237EBE;
 }
 
@@ -32,7 +33,7 @@ body {
 .say::after,
 .quote::before,
 .quote::after {
-  content: " \" "
+  content: "\""
 }
 
 .anim {
@@ -54,13 +55,11 @@ body {
   font-family: bold;
   border-radius: 1rem;
   max-width: 500px;
+  min-width: 300px;
   font-size: 25px;
   font-family: 'Patrick Hand', Arial;
 }
 
-.op {
-  animation: op .3s both;
-}
 
 @keyframes spin {
   0% {
@@ -68,25 +67,11 @@ body {
   }
 
   50% {
-    transform: translate(-50%, -50%) scale(1.2) rotateZ(20deg);
+    transform: translate(-50%, -50%) scale(1.5) rotateZ(20deg);
   }
 
   100% {
-    transform: translate(-50%, -50%) scale(1.2) rotateZ(-20deg);
+    transform: translate(-50%, -50%) scale(1.5) rotateZ(-20deg);
 
-  }
-}
-
-@keyframes op {
-  0% {
-    transform: scale(0)
-  }
-
-  50% {
-    transform: scale(1, .02);
-  }
-
-  100% {
-    transform: scale(1)
   }
 }
