@@ -16,8 +16,12 @@ fetch('https://type.fit/api/quotes')
     // randomly btn
     document.querySelector('button').onclick = function() {
       quote.innerHTML = '';
-      this.classList.remove('anim');
-      setTimeout(() => this.classList.add('anim'), 0);
+           quote.classList.remove('active');
+  this.classList.remove('anim');
+      setTimeout(() => {
+        this.classList.add('anim');
+       quote.classList.add('active');
+      },0);
       // make random number
       random = Math.floor(Math.random() * (data.length - 1));
       quote.innerHTML = data[random].text;
